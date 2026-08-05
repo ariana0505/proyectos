@@ -2,11 +2,20 @@
   max-width: 480px;
   margin: 3rem auto;
   padding: 0 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-h);
 }
 
 .task-form {
@@ -19,8 +28,11 @@ h1 {
   flex: 1;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 0.95rem;
+  font-family: inherit;
 }
 
 .task-form button {
@@ -29,6 +41,9 @@ h1 {
   border: none;
   background: #4f46e5;
   color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -42,8 +57,12 @@ h1 {
 .task-filters button {
   padding: 0.35rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   background: transparent;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: inherit;
   cursor: pointer;
 }
 
@@ -67,7 +86,7 @@ h1 {
   align-items: center;
   gap: 0.6rem;
   padding: 0.6rem 0.75rem;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--border);
   border-radius: 8px;
 }
 
@@ -79,11 +98,20 @@ h1 {
 .task-texto {
   flex: 1;
   cursor: pointer;
+  color: var(--text-h);
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .task-edit-input {
   flex: 1;
   padding: 0.25rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 0.95rem;
+  font-family: inherit;
 }
 
 .task-actions {
@@ -96,20 +124,22 @@ h1 {
   background: transparent;
   cursor: pointer;
   font-size: 0.85rem;
-  color: #666;
+  font-family: inherit;
+  color: var(--text);
 }
 
 .task-actions button:hover {
-  color: #111;
+  color: var(--text-h);
 }
 
 .empty-state {
   text-align: center;
-  color: #888;
+  color: var(--text);
+  font-size: 0.9rem;
 }
 
 .task-counter {
   text-align: center;
-  color: #666;
-  font-size: 0.9rem;
+  color: var(--text);
+  font-size: 0.85rem;
 }
