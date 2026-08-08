@@ -1,8 +1,12 @@
 import { TaskItem } from './TaskItem'
 
-export function TaskList({ tasks, onToggle, onDelete, onEdit }) {
+export function TaskList({ tasks, onToggle, onDelete, onEdit, haySinFiltrar }) {
   if (tasks.length === 0) {
-    return <p className="empty-state">No hay tareas por aquí.</p>
+    return (
+      <p className="empty-state">
+        {haySinFiltrar ? 'Ninguna tarea coincide con el filtro.' : 'No hay tareas por aquí.'}
+      </p>
+    )
   }
 
   return (
